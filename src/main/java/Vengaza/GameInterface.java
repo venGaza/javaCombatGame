@@ -7,7 +7,7 @@ public interface GameInterface {
     void menu();                                //Game Menu
 
     // Private Functions
-    void validate(int x , int y , int z);       //Validates input is in range
+    void validate(int choice, int startRange , int endRange);       //Validates input is in range
     void characterSetup();                      //Controls character creation process
     void characterSelection();                  //User selects characters
     void createCharacterObjects();              //Dynamic creation of characters
@@ -21,13 +21,4 @@ public interface GameInterface {
     void characterTwoDefend();                  //Character two defends an attack
     void printWinner();                         //Prints out winner of battle
     void pause();                               //Pauses game
-
-    //Variables
-    boolean exitProgram = false;
-    int selectionOne = 0;
-    int selectionTwo = 0;
-    int round = 0;
-    int glare = 0;
-    //Character characterOne = new Character();
-    //Character characterTwo = new Character();
 }
