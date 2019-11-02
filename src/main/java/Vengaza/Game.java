@@ -1,5 +1,5 @@
 package Vengaza;
-import java.util.*;
+import java.util.*; //Scanner
 
 public class Game implements GameInterface {
     // Variables
@@ -10,7 +10,7 @@ public class Game implements GameInterface {
     int glare;
 
     /**
-     * Function: Game()
+     * Method: Game()
      * Usage: Game()
      * -------------------------
      * This is the default constructor for the Game class. This method sets default values for the
@@ -22,12 +22,12 @@ public class Game implements GameInterface {
         selectionTwo = 1;
         round = 1;
         int glare = 100;
-        //characterOne = NULL;
-        //characterTwo = NULL;
+        Character characterOne = null;
+        Character characterTwo = null;
     }
 
     /**
-     * Function: Game(int selectionOne, int selectionTwo)
+     * Method: Game(int selectionOne, int selectionTwo)
      * Usage: Game(selectionOne, selectionTwo)
      * -------------------------
      * This is the overloaded constructor for the Game class. This method sets default values for the
@@ -40,15 +40,13 @@ public class Game implements GameInterface {
     }
 
     /*
-     * Function: Game::menu()
+     * Method: Game::menu()
      * Usage: gameObj.menu()
      * -------------------------
      * This is a public member function for the Game class. This function creates the menu for the class
      * and allows the user to play through the game or exit.
      */
     public void menu() {
-        Scanner sc = new Scanner(System.in);
-
         while (!exitProgram) {
             System.out.println("Menu");
             System.out.println("---------------------------------");
@@ -56,22 +54,53 @@ public class Game implements GameInterface {
             System.out.println("2. Exit");
             System.out.println("Please select a number: ");
 
-            while (!sc.hasNextInt()) {
-                System.out.println("Please pick a valid number!");
-                sc.next(); // this is important!
-            }
-            int menuSelection = sc.nextInt();
+            int menuSelection = getInteger(1, 2);
             System.out.println();
-            validate(menuSelection, 1, 2);
 
             if (menuSelection == 1) {                                    //1. Play Game
                 characterSetup();
-                battle();
-
-                deleteCharacterObjects();                                //Free Memory
+                //battle();
             } else {                                                     //2. Exit
                 exitProgram = true;
             }
         }
     }
+
+    /**
+     * Method: getInteger()
+     * Usage: getInteger()
+     * -------------------------
+     * This is a private member method for the Game class. This method gets an integer input from the user
+     * and validates it falls within the specified range.
+     */
+    public int getInteger(int min, int max) {
+        Scanner sc = new Scanner(System.in);
+
+        int number = 0;
+        while(number < min || number > max) {
+            while (!sc.hasNextInt()) {
+                System.out.println("Selection must be number!");
+                sc.next();
+            }
+            number = sc.nextInt();
+            System.out.println("Please pick a valid number!");
+        }
+
+        sc.close();
+        return number;
+    }
+
+    /**
+     * Method: characterSetup()
+     * Usage: characterSetup()
+     * -------------------------
+     * This is a private member method for the Game class. This function sets up the characters for the
+     * game.
+     */
+    public void characterSetup() {
+        //characterSelection();                                        //Choose Characters
+        //createCharacterObjects();                                    //Create Character Two
+    }
+
+
 }

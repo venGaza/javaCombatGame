@@ -12,9 +12,8 @@ public class App
     {
         welcomeMessage();
 
-        //Game game = new Game();
-        //Game game;
-        //game.menu();
+        Game game = new Game();
+        game.menu();
 
         System.out.println( "Have a nice day!" );
     }

@@ -2,13 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e97ab603-d020-42d5-856b-9e89cbfdfd1b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Vengaza/Character.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Vengaza/CharacterInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Vengaza/getInteger.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Vengaza/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Vengaza/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Vengaza/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Vengaza/Character.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Vengaza/CharacterInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Vengaza/CharacterInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Vengaza/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Vengaza/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Vengaza/GameInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Vengaza/GameInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Vengaza/getInteger.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Vengaza/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Vengaza/App.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -84,7 +85,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
