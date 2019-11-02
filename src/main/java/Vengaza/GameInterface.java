@@ -7,8 +7,8 @@ public interface GameInterface {
     void menu();                                //Game Menu
 
     // Private Functions
-    int getInteger(int min, int max);          //Gets validated integer within specified range
-    void characterSetup();                      //Controls character creation process
+    //int getInteger(int min, int max);          //Gets validated integer within specified range
+    //void characterSetup();                      //Controls character creation process
     //void characterSelection();                  //User selects characters
     //void createCharacterObjects();              //Dynamic creation of characters
     //void deleteCharacterObjects();              //Frees memory from characters at end of game

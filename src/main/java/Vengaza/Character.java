@@ -2,14 +2,14 @@ package Vengaza;
 
 public abstract class Character implements CharacterInterface {
     // Variables
-    private String name;
-    private String type;
-    private int attack;                             //0 = 1d12 , 1 = 2d6 , 2 = 2d10
-    private int defense;                            //3 = 1d6 , 4 = 2d6 , 5 = 3d6
-    private int armor;
-    private int strength;
-    private int attackRoll;
-    private int defenseRoll;
+    protected String name;
+    protected String type;
+    protected int attack;                             //0 = 1d12 , 1 = 2d6 , 2 = 2d10
+    protected int defense;                            //3 = 1d6 , 4 = 2d6 , 5 = 3d6
+    protected int armor;
+    protected int strength;
+    protected int attackRoll;
+    protected int defenseRoll;
 
     /**
      * Method: Character()

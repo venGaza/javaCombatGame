@@ -3,11 +3,13 @@ import java.util.*; //Scanner
 
 public class Game implements GameInterface {
     // Variables
-    boolean exitProgram;
-    int selectionOne;
-    int selectionTwo;
-    int round;
-    int glare;
+    private boolean exitProgram;
+    private int selectionOne;
+    private int selectionTwo;
+    private int round;
+    private int glare;
+    Character characterOne;
+    Character characterTwo;
 
     /**
      * Method: Game()
@@ -98,9 +100,65 @@ public class Game implements GameInterface {
      * game.
      */
     public void characterSetup() {
-        //characterSelection();                                        //Choose Characters
+        characterSelection();                                        //Choose Characters
         //createCharacterObjects();                                    //Create Character Two
     }
 
+    /**
+     * Method: characterSelection()
+     * Usage: Game()
+     * -------------------------
+     * This is a private member function for the Game class. This function allows the user to choose
+     * two characters to battle each other.
+     */
+    private void characterSelection() {
+        System.out.println("Character Selection");
+        System.out.println("---------------------------------");
+        System.out.println("1. Barbarian \n2. Vampire \n3. Blue Men \n4. Medusa \n5. Harry Potter");
+        System.out.println("Please select a character(choose corresponding number): ");
 
+        Scanner sc = new Scanner(System.in);
+        selectionOne = getInteger(1, 5);                            //Select character one
+        System.out.println("Please select a 2nd character: ");
+        selectionTwo = getInteger(1, 5);                            //Select character two
+        System.out.println();
+        sc.close();
+    }
+
+    /**
+     * Method: Game::createCharacterObject(Character*, const int&)
+     * Usage: createCharacterObject(characterOne, 1)
+     * -------------------------
+     * This is a private member function for the Game class. This function dynamically creates a character
+     * object based on user selection.
+     */
+    private void createCharacterObjects() {
+        if (selectionOne == 1) {                            //Create character one dynamic character
+            characterOne = new Barbarian();
+        } else if (selectionOne == 2) {
+            characterOne = new Vampire;
+        } else if (selectionOne == 3) {
+            characterOne = new BlueMen;
+        } else if (selectionOne == 4) {
+            characterOne = new Medusa;
+        } else {
+            characterOne = new HarryPotter;
+        }
+
+        if (selectionTwo == 1) {                            //Create character two dynamic character
+            characterTwo = new Barbarian;
+        } else if (selectionTwo == 2) {
+            characterTwo = new Vampire;
+        } else if (selectionTwo == 3) {
+            characterTwo = new BlueMen;
+        } else if (selectionTwo == 4) {
+            characterTwo = new Medusa;
+        } else {
+            characterTwo = new HarryPotter;
+        }
+
+        if (characterOne->getName() == characterTwo->getName()) {               //Change characterTwo name
+            characterTwo->setName(characterOne->getName().append(" Clone"));    //if same type of character
+        }
+    }
 }
