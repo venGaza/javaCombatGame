@@ -1,13 +1,16 @@
 package Vengaza;
+import java.util.Random; //Random number generator
 
-/*
+/**
  * Class: Barbarian
  * -------------------------
  * This is the implementation for the Barbarian class. This subclass of Character stores the
  * characteristics and special abilities of the Barbarian class.
  */
 public class Barbarian extends Character implements BarbarianInterface{
-    /*
+    Random rand = new Random();
+
+    /**
      * Method: Barbarian()
      * Usage: Barbarian()
      * -------------------------
@@ -23,70 +26,67 @@ public class Barbarian extends Character implements BarbarianInterface{
         strength = 12;
     }
 
-    /*
-     * Function: Barbarian::attackChar()
+    /**
+     * Method: attackChar()
      * Usage: obj.attackChar()
      * -------------------------
-     * This is a public member function for the Barbarian class. This function calculates and returns an
+     * This is a public member method for the Barbarian class. This function calculates and returns an
      * attack number for the Barbarian object.
      */
     public void attackChar() {
-        int die1 = randomNumber(1, 6);                  //Barbarian rolls 2x 6 sided die for attack
-        int die2 = randomNumber(1, 6);
+        int die1 = rand.nextInt(5) + 1;                  //Barbarian rolls 2x 6 sided die for attack
+        int die2 = rand.nextInt(5) + 1;
         int attack = die1 + die2;
 
-        cout << Character::getName() << " attacks with a dice roll of: " << die1 << " " << die2
-                << " for a total attack of " <<  attack << "!" << endl << endl;
-        Character::setAttackRoll(attack);
+        System.out.println();
+
+        System.out.printf("%s attacks with a dice roll of %d %d ", getName(), die1, die2);
+        System.out.printf("for a total attack of %d! %n", attack);
+        setAttackRoll(attack);
     }
 
-    /*
-     * Function: Barbarian::defenseChar()
+    /**
+     * Method: defenseChar()
      * Usage: obj.defenseChar()
      * -------------------------
-     * This is a public member function for the Barbarian class. This function takes an attack number and
+     * This is a public member method for the Barbarian class. This function takes an attack number and
      * returns how much damage was done.
      */
     public void defenseChar(int attack) {
-        int die1 = randomNumber(1, 6);
-        int die2 = randomNumber(1, 6);
+        int die1 = rand.nextInt(5) + 1;
+        int die2 = rand.nextInt(5) + 1;
         int defense = die1 + die2;
 
-        cout << Character::getName() << " defends with a dice roll of: " << die1 << " " << die2
-                <<  " for a total defense of " << defense <<  "!" << endl << endl;
+        System.out.printf("%s defends with a dice roll of: %d %d", getName(), die1, die2);
+        System.out.printf(" for a total defense of %d!%n", defense);
 
-        int damage = attack - defense - Character::getArmor();
+        int damage = attack - defense - getArmor();
+
+        System.out.printf("%d(attack) - %d(defense) - %d(armor)", attack, defense, getArmor());
+        System.out.printf(" = %d damage taken %n", damage);
 
         if (damage <= 0) {
-            cout << attack << "(attack) - " << defense << "(defense) - " << Character::getArmor()
-                    << "(armor) = " << damage << " damage taken" << endl << endl;
-
-            cout << Character::getName() << " takes no damage and still has " << Character::getStrength()
-                    << " strength."
-                    << endl << endl;
+            System.out.printf("%s takes not damage and still has %d strength.%n", getName(), getStrength());
         } else {
-            cout << attack << "(attack) - " << defense << "(defense) - " << Character::getArmor()
-                    << "(armor) = " << damage << " damage taken" << endl << endl;
 
-            Character::setStrength(Character::getStrength() - damage);
-            if (Character::getStrength() > 0) {
-                cout << Character::getName() << " now has " << Character::getStrength()
-                        << " strength." << endl << endl;
+            setStrength(getStrength() - damage);
+            if (getStrength() > 0) {
+                System.out.printf("%s now has $d strength.%n", getName(), getStrength());
             } else {
-                cout << Character::getName() << "'s strength is DEPLETED!" << endl << endl;
+                System.out.printf("%s's strength is DEPLETED!%n", getName());
             }
         }
     }
 
-    /*
-     * Function: Barbarian::printCharactersitic()
+    /**
+     * Method: printCharacteristic()
      * Usage: obj.printCharacteristic()
      * -------------------------
-     * This is a public member function for the Barbarian class. This function prints out the Barbarian
+     * This is a public member method for the Barbarian class. This function prints out the Barbarian
      * characteristics.
      */
     public void printCharacteristic() {
-        cout << "Barbarian: Think Conan or Hercules from the movies. Big sword, "
-                << "big muscles, bare torso." << endl << endl;
+        System.out.println("Barbarian: Think Conan or Hercules from the movies. Big sword, ");
+        System.out.println("big muscles, bare torso.\n");
     }
 }
