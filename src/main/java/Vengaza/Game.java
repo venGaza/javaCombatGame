@@ -8,8 +8,9 @@ public class Game implements GameInterface {
     private int selectionTwo;
     private int round;
     private int glare;
-    Character characterOne;
-    Character characterTwo;
+    private Character characterOne;
+    private Character characterTwo;
+    private Scanner sc = new Scanner(System.in);
 
     /**
      * Method: Game()
@@ -75,9 +76,7 @@ public class Game implements GameInterface {
      * This is a private member method for the Game class. This method gets an integer input from the user
      * and validates it falls within the specified range.
      */
-    public int getInteger(int min, int max) {
-        Scanner sc = new Scanner(System.in);
-
+    private int getInteger(int min, int max) {
         int number = 0;
         while(number < min || number > max) {
             while (!sc.hasNextInt()) {
@@ -88,7 +87,6 @@ public class Game implements GameInterface {
             System.out.println("Please pick a valid number!");
         }
 
-        sc.close();
         return number;
     }
 
@@ -99,7 +97,7 @@ public class Game implements GameInterface {
      * This is a private member method for the Game class. This function sets up the characters for the
      * game.
      */
-    public void characterSetup() {
+    private void characterSetup() {
         characterSelection();                                        //Choose Characters
         createCharacterObjects();                                    //Create Character Two
     }
@@ -160,5 +158,154 @@ public class Game implements GameInterface {
         if (characterOne.getName().equals(characterTwo.getName())) {               //Change characterTwo name
             characterTwo.setName(characterOne.getName() + "Clone");    //if same type of character
         }
+    }
+
+    /*
+     * Method: battle()
+     * Usage: battle()
+     * -------------------------
+     * This is a private member method for the Game class. This function battles the two characters.
+     */
+    private void battle() {
+        System.out.printf("Prepare for a grand battle between the mighty %s ", characterOne.getName());
+        System.out.printf(" and nefarious %s %n", characterTwo.getName());
+
+        characterOne.printCharacteristic();
+        characterTwo.printCharacteristic();
+        pause();
+
+        while (characterOne.getStrength() > 0 && characterTwo.getStrength() > 0) {
+            printRound();
+            advanceRound();
+            round++;
+        }
+
+        printWinner();
+    }
+
+    /**
+     * Method: printRound()
+     * Usage: printRound()
+     * -------------------------
+     * This is a private member method for the Game class. This function prints the current round.
+     */
+    private void printRound() {
+        System.out.println("Round");
+        System.out.println("---------------------------------");
+    }
+
+    /**
+     * Method: Game::advanceRound()
+     * Usage: battle()
+     * -------------------------
+     * This is a private member method for the Game class. This function advances the battle by one round.
+     */
+    private void advanceRound() {
+        characterOneAttack();
+        System.out.println("---------------------------------");
+        characterTwoDefend();
+
+        pause();
+
+        if (characterTwo.getStrength() > 0) {
+
+            System.out.println("---------------------------------");
+            characterTwoAttack();
+            System.out.println("---------------------------------");
+            characterOneDefend();
+        }
+
+        pause();
+    }
+
+    /**
+     * Method: characterOneAttack()
+     * Usage: characterOneAttack()
+     * -------------------------
+     * This is a private member method for the Game class. This function allows character one to attack
+     * opponent.
+     */
+    private void characterOneAttack() {
+        System.out.printf("%s attacking %s (Armor: %d Strength: %d%n",
+                            characterOne.getName(),
+                            characterTwo.getName(),
+                            characterTwo.getArmor(),
+                            characterTwo.getStrength());
+
+        characterOne.attackChar();
+    }
+
+    /**
+     * Method: characterTwoAttack()
+     * Usage: characterTwoAttack()
+     * -------------------------
+     * This is a private member method for the Game class. This function allows character two to attack
+     * opponent.
+     */
+    private void characterTwoAttack() {
+        System.out.printf("%s attacking %s (Armor: %d Strength: %d%n",
+                characterTwo.getName(),
+                characterOne.getName(),
+                characterOne.getArmor(),
+                characterOne.getStrength());
+
+            characterTwo.attackChar();
+    }
+
+    /**
+     * Method: characterOneDefend()
+     * Usage: characterOneDefend()
+     * -------------------------
+     * This is a private member method for the Game class. This function allows character one to defend.
+     */
+    private void characterOneDefend() {
+        if (characterTwo.getAttackRoll() == glare){              //Check for Medusa's GLARE special
+            System.out.printf("%s has turned to stone. %n", characterOne.getName());
+            characterOne.setStrength(0);
+        } else {
+            characterOne.defenseChar(characterTwo.getAttackRoll());
+        }
+    }
+
+    /**
+     * Method: characterTwoDefend()
+     * Usage: characterTwoDefend()
+     * -------------------------
+     * This is a private member method for the Game class. This function allows character two to defend.
+     */
+    private void characterTwoDefend() {
+        if (characterOne.getAttackRoll() == glare){               //Check for Medusa's GLARE special
+            System.out.printf("%s has turned to stone. %n", characterTwo.getName());
+            characterTwo.setStrength(0);
+        } else {
+            characterTwo.defenseChar(characterOne.getAttackRoll());
+        }
+    }
+
+    /**
+     * Method: printWinner()
+     * Usage: printWinner()
+     * -------------------------
+     * This is a private member method for the Game class. This function prints the winner of the game.
+     */
+    private void printWinner() {
+        if (characterTwo.getStrength() <= 0) {
+            System.out.printf("%s is the WINNER after %d rounds! %n", characterOne.getName(), round);
+        } else {
+            System.out.printf("%s is the WINNER after %d rounds! %n", characterTwo.getName(), round);
+        }
+
+        round = 0;                                  //Reset round counter for next game
+    }
+
+    /**
+     * Method: pause
+     * Usage: pause()
+     * -------------------------
+     * This is a private member method for the Game class. This function pauses the program.
+     */
+    private void pause() {
+        System.out.println("Press enter to continue");
+        sc.nextLine();
     }
 }
