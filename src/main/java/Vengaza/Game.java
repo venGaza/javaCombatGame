@@ -152,13 +152,13 @@ public class Game implements GameInterface {
         } else if (selectionTwo == 3) {
             characterTwo = new BlueMen();
         } else if (selectionTwo == 4) {
-            characterTwo = new Medusa;
+            characterTwo = new Medusa();
         } else {
-            characterTwo = new HarryPotter;
+            characterTwo = new HarryPotter();
         }
 
-        if (characterOne->getName() == characterTwo->getName()) {               //Change characterTwo name
-            characterTwo->setName(characterOne->getName().append(" Clone"));    //if same type of character
+        if (characterOne.getName() == characterTwo.getName()) {               //Change characterTwo name
+            characterTwo.setName(characterOne.getName().append(" Clone"));    //if same type of character
         }
     }
 }
