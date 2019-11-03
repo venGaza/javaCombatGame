@@ -2,16 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e97ab603-d020-42d5-856b-9e89cbfdfd1b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Vengaza/Vampire.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Vengaza/VampireInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Vengaza/Barbarian.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Vengaza/Barbarian.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Vengaza/Vampire.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Vengaza/Vampire.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Vengaza/VampireInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Vengaza/VampireInterface.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="combatGame" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
