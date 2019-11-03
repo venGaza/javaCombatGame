@@ -2,14 +2,14 @@ package Vengaza;
 
 public abstract class Character implements CharacterInterface {
     // Variables
-    protected String name;
-    protected String type;
-    protected int attack;                             //0 = 1d12 , 1 = 2d6 , 2 = 2d10
-    protected int defense;                            //3 = 1d6 , 4 = 2d6 , 5 = 3d6
-    protected int armor;
-    protected int strength;
-    protected int attackRoll;
-    protected int defenseRoll;
+    String name;
+    String type;
+    int attack;                             //0 = 1d12 , 1 = 2d6 , 2 = 2d10
+    int defense;                            //3 = 1d6 , 4 = 2d6 , 5 = 3d6
+    int armor;
+    int strength;
+    private int attackRoll;
+    private int defenseRoll;
 
     /**
      * Method: Character()
@@ -44,9 +44,6 @@ public abstract class Character implements CharacterInterface {
         this.strength = strength;
     }
 
-    /****************************************************************************************************
-     *                                          GETTERS                                                 *
-     ***************************************************************************************************/
     /**
      * Method: getName()
      * Usage: obj.getName()
@@ -119,9 +116,6 @@ public abstract class Character implements CharacterInterface {
         return defenseRoll;
     }
 
-    /****************************************************************************************************
-     *                                          SETTERS                                                 *
-     ***************************************************************************************************/
     /**
      * Method: setName()
      * Usage: obj.setName("string")

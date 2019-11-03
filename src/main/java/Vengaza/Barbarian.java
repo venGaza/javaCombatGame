@@ -9,7 +9,7 @@ import java.lang.Math; //Max
  * characteristics and special abilities of the Barbarian class.
  */
 public class Barbarian extends Character implements BarbarianInterface{
-    Random rand = new Random();
+    private Random rand = new Random();
 
     /**
      * Method: Barbarian()
@@ -18,7 +18,7 @@ public class Barbarian extends Character implements BarbarianInterface{
      * This is the default constructor for the Barbarian class. This function sets default values for the
      * Barbarian object.
      */
-    public Barbarian() {
+    Barbarian() {
         super();
         name = "Barbarian";
         type = "Barbarian";

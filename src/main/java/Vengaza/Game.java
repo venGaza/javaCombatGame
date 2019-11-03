@@ -19,7 +19,7 @@ public class Game implements GameInterface {
      * This is the default constructor for the Game class. This method sets default values for the
      * Game object.
      */
-    public Game() {
+    Game() {
         exitProgram = false;
         selectionOne = 1;
         selectionTwo = 1;
@@ -78,17 +78,18 @@ public class Game implements GameInterface {
      */
     private int getInteger(int min, int max) {
         int number = 0;
-        number = sc.nextInt();
 
-        /*
-        while(number < min || number > max) {
+        while(true) {
             while (!sc.hasNextInt()) {
                 System.out.println("Selection must be number!");
                 sc.next();
             }
             number = sc.nextInt();
+            if(number >= min && number <= max) {
+                break;
+            }
             System.out.println("Please pick a valid number!");
-        }*/
+        }
 
         return number;
     }
@@ -292,8 +293,20 @@ public class Game implements GameInterface {
     private void printWinner() {
         if (characterTwo.getStrength() <= 0) {
             System.out.printf("%s is the WINNER after %d rounds! %n", characterOne.getName(), round);
+            System.out.println("__________.__                               ____   __      __.___               \n" +
+                    "\\______   \\  | _____  ___.__. ___________  /_   | /  \\    /  \\   | ____   ______\n" +
+                    " |     ___/  | \\__  \\<   |  |/ __ \\_  __ \\  |   | \\   \\/\\/   /   |/    \\ /  ___/\n" +
+                    " |    |   |  |__/ __ \\\\___  \\  ___/|  | \\/  |   |  \\        /|   |   |  \\\\___ \\ \n" +
+                    " |____|   |____(____  / ____|\\___  >__|     |___|   \\__/\\  / |___|___|  /____  >\n" +
+                    "                    \\/\\/         \\/                      \\/           \\/     \\/ ");
         } else {
             System.out.printf("%s is the WINNER after %d rounds! %n", characterTwo.getName(), round);
+            System.out.println("__________.__                              ________    __      __.___               \n" +
+                    "\\______   \\  | _____  ___.__. ___________  \\_____  \\  /  \\    /  \\   | ____   ______\n" +
+                    " |     ___/  | \\__  \\<   |  |/ __ \\_  __ \\  /  ____/  \\   \\/\\/   /   |/    \\ /  ___/\n" +
+                    " |    |   |  |__/ __ \\\\___  \\  ___/|  | \\/ /       \\   \\        /|   |   |  \\\\___ \\ \n" +
+                    " |____|   |____(____  / ____|\\___  >__|    \\_______ \\   \\__/\\  / |___|___|  /____  >\n" +
+                    "                    \\/\\/         \\/                \\/        \\/           \\/     \\/");
         }
 
         round = 1;                                  //Reset round counter for next game

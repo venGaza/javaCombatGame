@@ -11,19 +11,21 @@ public class App
     public static void main( String[] args )
     {
         welcomeMessage();
-        //Character test = new Barbarian();
-        //System.out.printf("%d", test.getStrength());
-
         Game game = new Game();
         game.menu();
 
-        System.out.println( "Have a nice day!" );
+        System.out.println( "  ___ ___                                      .__                   .___             ._.\n" +
+                " /   |   \\_____ ___  __ ____   _____      ____ |__| ____  ____     __| _/____  ___.__.| |\n" +
+                "/    ~    \\__  \\\\  \\/ // __ \\  \\__  \\    /    \\|  |/ ___\\/ __ \\   / __ |\\__  \\<   |  || |\n" +
+                "\\    Y    // __ \\\\   /\\  ___/   / __ \\_ |   |  \\  \\  \\__\\  ___/  / /_/ | / __ \\\\___  | \\|\n" +
+                " \\___|_  /(____  /\\_/  \\___  > (____  / |___|  /__|\\___  >___  > \\____ |(____  / ____| __\n" +
+                "       \\/      \\/          \\/       \\/       \\/        \\/    \\/       \\/     \\/\\/      \\/" );
     }
 
     /**
      * Prints out a welcome message upon launching of the combatGame application
      */
-    public static void welcomeMessage()
+    private static void welcomeMessage()
     {
         System.out.println("Welcome to the Fantasy Combat Game! This game allows the player to choose a fantasy \n" +
                 "character to do battle with. The player can choose between the following: Barbarian, Vampire, \n" +
