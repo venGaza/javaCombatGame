@@ -27,6 +27,13 @@ public class App
      */
     private static void welcomeMessage()
     {
+        System.out.println("______       _        _       \n" +
+                "| ___ \\     | |      | |      \n" +
+                "| |_/ / __ _| |_ __ _| | ___  \n" +
+                "| ___ \\/ _` | __/ _` | |/ _ \\ \n" +
+                "| |_/ / (_| | || (_| | | (_) |\n" +
+                "\\____/ \\__,_|\\__\\__,_|_|\\___/ ");
+        System.out.println();
         System.out.println("Welcome to the Batalo - Combat Game! This game allows the player to choose a fantasy \n" +
                 "character to do battle with. The player can choose between the following: Barbarian, Vampire, \n" +
                 "Blue Men, Medusa, and the feared Harry Potter! Each character possesses a unique special \n" +

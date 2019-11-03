@@ -6,6 +6,7 @@
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Download the Project (Command Line)](#download-the-project-command-line)
+  - [Run](#run)
 - [Built With](#built-with)
 - [Authors and Contributions](#authors-and-contributions)
 - [License](#license)
@@ -31,6 +32,18 @@ Navigate to desired directory within the command line. Then download the project
 ```bash
 $ git clone https://github.com/venGaza/javaCombatGame.git
 ```
+
+### Run
+
+Lastly, the web application can be started with the following command:
+
+```zsh
+# From the root folder
+$ mvn compile
+$ mvn 
+```
+
+
 
 ## Built With
 * [IntelliJ](https://www.jetbrains.com/idea/) - IntelliJ IDEA is an integrated development environment written in Java for developing computer software.
