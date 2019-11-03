@@ -2,8 +2,6 @@ package Vengaza;
 
 public interface GameInterface {
     // Public Functions
-    public void Game();                         //Constructor
-    public void Game(int x, int y);             //Overloaded Constructor
     void menu();                                //Game Menu
 
     // Private Functions

@@ -8,8 +8,8 @@ public class Game implements GameInterface {
     private int selectionTwo;
     private int round;
     private int glare;
-    Character characterOne;
-    Character characterTwo;
+    private Character characterOne;
+    private Character characterTwo;
     private Scanner sc = new Scanner(System.in);
 
     /**
@@ -19,7 +19,7 @@ public class Game implements GameInterface {
      * This is the default constructor for the Game class. This method sets default values for the
      * Game object.
      */
-    public void Game() {
+    public Game() {
         exitProgram = false;
         selectionOne = 1;
         selectionTwo = 1;
@@ -36,7 +36,7 @@ public class Game implements GameInterface {
      * This is the overloaded constructor for the Game class. This method sets default values for the
      * Game object.
      */
-    public void Game(int selectionOne, int selectionTwo) {
+    public Game(int selectionOne, int selectionTwo) {
         exitProgram = false;
         this.selectionOne = selectionOne;
         this.selectionTwo = selectionTwo;
@@ -227,7 +227,7 @@ public class Game implements GameInterface {
      * opponent.
      */
     private void characterOneAttack() {
-        System.out.printf("%s attacking %s (Armor: %d Strength: %d)%n",
+        System.out.printf("%s attacking %s (Armor: %d Strength: %d)",
                             characterOne.getName(),
                             characterTwo.getName(),
                             characterTwo.getArmor(),
@@ -250,7 +250,7 @@ public class Game implements GameInterface {
                 characterOne.getArmor(),
                 characterOne.getStrength());
 
-            characterTwo.attackChar();
+        characterTwo.attackChar();
     }
 
     /**
@@ -296,7 +296,7 @@ public class Game implements GameInterface {
             System.out.printf("%s is the WINNER after %d rounds! %n", characterTwo.getName(), round);
         }
 
-        round = 0;                                  //Reset round counter for next game
+        round = 1;                                  //Reset round counter for next game
     }
 
     /**
@@ -309,5 +309,6 @@ public class Game implements GameInterface {
         System.out.println();
         System.out.println("Press enter to continue");
         sc.nextLine();
+        System.out.println();
     }
 }
