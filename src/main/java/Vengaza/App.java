@@ -27,9 +27,9 @@ public class App
      */
     private static void welcomeMessage()
     {
-        System.out.println("Welcome to the Fantasy Combat Game! This game allows the player to choose a fantasy \n" +
+        System.out.println("Welcome to the Batalo - Combat Game! This game allows the player to choose a fantasy \n" +
                 "character to do battle with. The player can choose between the following: Barbarian, Vampire, \n" +
                 "Blue Men, Medusa, and the feared Harry Potter! Each character possesses a unique special \n" +
-                "special ability to allow them to conquer their opponent. Enjoy!!! \n");
+                "ability to allow them to conquer their opponent. Enjoy!!! \n");
     }
 }
