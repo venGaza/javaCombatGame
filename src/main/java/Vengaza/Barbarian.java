@@ -1,5 +1,6 @@
 package Vengaza;
 import java.util.Random; //Random number generator
+import java.lang.Math; //Max
 
 /**
  * Class: Barbarian
@@ -61,13 +62,13 @@ public class Barbarian extends Character implements BarbarianInterface{
         System.out.printf("%s defends with a dice roll of: %d %d", getName(), die1, die2);
         System.out.printf(" for a total defense of %d!%n", defense);
 
-        int damage = super.attack - super.defense - super.getArmor();
+        int damage = Math.max(0, attack - defense - getArmor());
 
         System.out.printf("%d(attack) - %d(defense) - %d(armor)", attack, defense, getArmor());
         System.out.printf(" = %d damage taken %n", damage);
 
         if (damage <= 0) {
-            System.out.printf("%s takes not damage and still has %d strength.%n", getName(), getStrength());
+            System.out.printf("%s takes no damage and still has %d strength.%n", getName(), getStrength());
         } else {
             setStrength(getStrength() - damage);
             if (getStrength() > 0) {

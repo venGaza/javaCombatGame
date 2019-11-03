@@ -1,5 +1,6 @@
 package Vengaza;
 import java.util.Random; //Random number generator
+import java.lang.Math; //Max
 
 /*
  * Class: Medusa
@@ -63,7 +64,7 @@ public class Medusa extends Character implements MedusaInterface {
         System.out.printf("%s defends with a dice roll of: %d ", getName(), die1);
         System.out.printf(" for a total defense of %d!%n", defense);
 
-        int damage = attack - defense - getArmor();          //Calculate total damage
+        int damage = Math.max(0, attack - defense - getArmor());          //Calculate total damage
 
         System.out.printf("%d(attack) - %d(defense) - %d(armor)", attack, defense, getArmor());
         System.out.printf(" = %d damage taken %n", damage);

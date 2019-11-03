@@ -191,7 +191,7 @@ public class Game implements GameInterface {
      * This is a private member method for the Game class. This function prints the current round.
      */
     private void printRound() {
-        System.out.println("Round");
+        System.out.printf("Round %d%n", round);
         System.out.println("---------------------------------");
     }
 
@@ -227,7 +227,7 @@ public class Game implements GameInterface {
      * opponent.
      */
     private void characterOneAttack() {
-        System.out.printf("%s attacking %s (Armor: %d Strength: %d%n",
+        System.out.printf("%s attacking %s (Armor: %d Strength: %d)%n",
                             characterOne.getName(),
                             characterTwo.getName(),
                             characterTwo.getArmor(),
@@ -244,7 +244,7 @@ public class Game implements GameInterface {
      * opponent.
      */
     private void characterTwoAttack() {
-        System.out.printf("%s attacking %s (Armor: %d Strength: %d%n",
+        System.out.printf("%s attacking %s (Armor: %d Strength: %d)%n",
                 characterTwo.getName(),
                 characterOne.getName(),
                 characterOne.getArmor(),
@@ -306,6 +306,7 @@ public class Game implements GameInterface {
      * This is a private member method for the Game class. This function pauses the program.
      */
     private void pause() {
+        System.out.println();
         System.out.println("Press enter to continue");
         sc.nextLine();
     }

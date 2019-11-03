@@ -1,6 +1,6 @@
 package Vengaza;
 import java.util.Random; //Random number generator
-
+import java.lang.Math; //Max
 /*
  * Class: BlueMen
  * -------------------------
@@ -96,7 +96,7 @@ public class BlueMen extends Character implements BlueMenInterface {
      * of the Blue Men defense.
      */
     private void printDefenseResult(int attack) {
-        damage = attack - defense - getArmor();
+        damage = Math.max(0, attack - defense - getArmor());
 
         System.out.printf("%d(attack) - %d(defense) - %d(armor)", attack, defense, getArmor());
         System.out.printf(" = %d damage taken %n", damage);

@@ -3,7 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="e97ab603-d020-42d5-856b-9e89cbfdfd1b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Vengaza/Barbarian.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Vengaza/Barbarian.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Vengaza/BlueMen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Vengaza/BlueMen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Vengaza/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Vengaza/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Vengaza/HarryPotter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Vengaza/HarryPotter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Vengaza/Medusa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Vengaza/Medusa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Vengaza/Vampire.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Vengaza/Vampire.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Vengaza/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Vengaza/Game.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
