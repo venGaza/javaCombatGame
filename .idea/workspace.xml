@@ -3,7 +3,25 @@
   <component name="ChangeListManager">
     <list default="true" id="e97ab603-d020-42d5-856b-9e89cbfdfd1b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Vengaza/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Vengaza/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Vengaza/Barbarian.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Vengaza/Barbarian.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Vengaza/BarbarianInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Vengaza/BarbarianInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Vengaza/BlueMen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Vengaza/BlueMen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Vengaza/BlueMenInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Vengaza/BlueMenInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Vengaza/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Vengaza/Character.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Vengaza/CharacterInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Vengaza/CharacterInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Vengaza/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Vengaza/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Vengaza/HarryPotter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Vengaza/HarryPotter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Vengaza/HarryPotterInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Vengaza/HarryPotterInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Vengaza/Medusa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Vengaza/Medusa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Vengaza/MedusaInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Vengaza/MedusaInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Vengaza/Vampire.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Vengaza/Vampire.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Vengaza/VampireInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Vengaza/VampireInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Vengaza/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Vengaza/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Vengaza/Character.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Vengaza/Character.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Vengaza/CharacterInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Vengaza/CharacterInterface.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Vengaza/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Vengaza/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Vengaza/GameInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Vengaza/GameInterface.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

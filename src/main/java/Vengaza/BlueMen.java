@@ -13,13 +13,14 @@ public class BlueMen extends Character implements BlueMenInterface {
     private int damage;
 
     /**
-     * Method: Barbarian()
-     * Usage: Barbarian()
+     * Method: BlueMen()
+     * Usage: BlueMen()
      * -------------------------
-     * This is the default constructor for the Barbarian class. This function sets default values for the
+     * This is the default constructor for the BlueMen class. This function sets default values for the
      * Barbarian object.
      */
-    public void BlueMen() {
+    public BlueMen() {
+        super();
         name = "Blue Men";
         type = "Blue Men";
         attack = 2;              //2d10

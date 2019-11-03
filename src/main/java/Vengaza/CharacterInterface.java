@@ -1,10 +1,6 @@
 package Vengaza;
 
 public interface CharacterInterface {
-    //Constructors
-    public void Character();
-    public void Character(String name, String type, int attack, int defense, int armor, int strength);
-
     //Getters
     String getName();
     String getType();

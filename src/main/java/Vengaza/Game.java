@@ -8,8 +8,8 @@ public class Game implements GameInterface {
     private int selectionTwo;
     private int round;
     private int glare;
-    private Character characterOne;
-    private Character characterTwo;
+    Character characterOne;
+    Character characterTwo;
     private Scanner sc = new Scanner(System.in);
 
     /**
@@ -78,6 +78,9 @@ public class Game implements GameInterface {
      */
     private int getInteger(int min, int max) {
         int number = 0;
+        number = sc.nextInt();
+
+        /*
         while(number < min || number > max) {
             while (!sc.hasNextInt()) {
                 System.out.println("Selection must be number!");
@@ -85,7 +88,7 @@ public class Game implements GameInterface {
             }
             number = sc.nextInt();
             System.out.println("Please pick a valid number!");
-        }
+        }*/
 
         return number;
     }
@@ -115,12 +118,10 @@ public class Game implements GameInterface {
         System.out.println("1. Barbarian \n2. Vampire \n3. Blue Men \n4. Medusa \n5. Harry Potter");
         System.out.println("Please select a character(choose corresponding number): ");
 
-        Scanner sc = new Scanner(System.in);
         selectionOne = getInteger(1, 5);                            //Select character one
         System.out.println("Please select a 2nd character: ");
         selectionTwo = getInteger(1, 5);                            //Select character two
         System.out.println();
-        sc.close();
     }
 
     /**

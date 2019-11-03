@@ -17,7 +17,8 @@ public class Vampire extends Character implements VampireInterface {
      * This is the default constructor for the Vampire class. This function sets default values for the
      * Vampire object.
      */
-    public void Vampire() {
+    public Vampire() {
+        super();
         name = "Vampire";
         type = "Vampire";
         attack = 0;              //1d12

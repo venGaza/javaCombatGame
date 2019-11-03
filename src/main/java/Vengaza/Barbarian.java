@@ -17,7 +17,8 @@ public class Barbarian extends Character implements BarbarianInterface{
      * This is the default constructor for the Barbarian class. This function sets default values for the
      * Barbarian object.
      */
-    public void Barbarian() {
+    public Barbarian() {
+        super();
         name = "Barbarian";
         type = "Barbarian";
         attack = 1;              //2d6
@@ -60,7 +61,7 @@ public class Barbarian extends Character implements BarbarianInterface{
         System.out.printf("%s defends with a dice roll of: %d %d", getName(), die1, die2);
         System.out.printf(" for a total defense of %d!%n", defense);
 
-        int damage = attack - defense - getArmor();
+        int damage = super.attack - super.defense - super.getArmor();
 
         System.out.printf("%d(attack) - %d(defense) - %d(armor)", attack, defense, getArmor());
         System.out.printf(" = %d damage taken %n", damage);

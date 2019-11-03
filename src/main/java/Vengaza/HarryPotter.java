@@ -18,7 +18,8 @@ public class HarryPotter extends Character implements HarryPotterInterface {
      * This is the default constructor for the HarryPotter class. This function sets default values for the
      * HarryPotter object.
      */
-    public void HarryPotter() {
+    public HarryPotter() {
+        super();
         name = "Harry Potter";
         type = "Harry Potter";
         attack = 1;              //2d6

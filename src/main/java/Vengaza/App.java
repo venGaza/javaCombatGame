@@ -11,6 +11,8 @@ public class App
     public static void main( String[] args )
     {
         welcomeMessage();
+        //Character test = new Barbarian();
+        //System.out.printf("%d", test.getStrength());
 
         Game game = new Game();
         game.menu();

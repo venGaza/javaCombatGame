@@ -17,7 +17,8 @@ public class Medusa extends Character implements MedusaInterface {
      * This is the default constructor for the Medusa class. This function sets default values for the
      * Medusa object.
      */
-    public void Medusa() {
+    public Medusa() {
+        super();
         name = "Medusa";
         type = "Medusa";
         attack = 1;              //2d6

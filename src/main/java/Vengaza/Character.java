@@ -18,7 +18,7 @@ public abstract class Character implements CharacterInterface {
      * This is the default constructor for the Character class. This function sets default values for the
      * Character object.
      */
-    public void Character() {
+    public Character() {
         name = "Barbarian";
         type = "Barbarian";
         attack = 0;
@@ -35,7 +35,7 @@ public abstract class Character implements CharacterInterface {
      * This is the overloaded constructor for the Character class. This function takes 5 parameters to
      * set the traits of the character object.
      */
-    public void Character(String name, String type, int attack, int defense, int armor, int strength) {
+    public Character(String name, String type, int attack, int defense, int armor, int strength) {
         this.name = name;
         this.type = type;
         this.attack = attack;
