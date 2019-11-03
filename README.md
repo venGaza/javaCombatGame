@@ -43,7 +43,9 @@ $ mvn compile
 $ mvn 
 ```
 
+or
 
+The program can be run from inside the IntelliJ IDE. Simply build the project and run from the top menu.
 
 ## Built With
 * [IntelliJ](https://www.jetbrains.com/idea/) - IntelliJ IDEA is an integrated development environment written in Java for developing computer software.
