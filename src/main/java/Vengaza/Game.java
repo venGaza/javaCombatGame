@@ -62,7 +62,7 @@ public class Game implements GameInterface {
 
             if (menuSelection == 1) {                                    //1. Play Game
                 characterSetup();
-                //battle();
+                battle();
             } else {                                                     //2. Exit
                 exitProgram = true;
             }
@@ -157,7 +157,7 @@ public class Game implements GameInterface {
         }
 
         if (characterOne.getName().equals(characterTwo.getName())) {               //Change characterTwo name
-            characterTwo.setName(characterOne.getName() + "Clone");    //if same type of character
+            characterTwo.setName(characterOne.getName() + " Clone");    //if same type of character
         }
     }
 
