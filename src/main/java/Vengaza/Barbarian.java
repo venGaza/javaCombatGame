@@ -68,7 +68,6 @@ public class Barbarian extends Character implements BarbarianInterface{
         if (damage <= 0) {
             System.out.printf("%s takes not damage and still has %d strength.%n", getName(), getStrength());
         } else {
-
             setStrength(getStrength() - damage);
             if (getStrength() > 0) {
                 System.out.printf("%s now has $d strength.%n", getName(), getStrength());

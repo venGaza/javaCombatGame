@@ -108,7 +108,7 @@ public class Game implements GameInterface {
      * Method: characterSelection()
      * Usage: Game()
      * -------------------------
-     * This is a private member function for the Game class. This function allows the user to choose
+     * This is a private member method for the Game class. This function allows the user to choose
      * two characters to battle each other.
      */
     private void characterSelection() {
@@ -129,28 +129,28 @@ public class Game implements GameInterface {
      * Method: Game::createCharacterObject(Character*, const int&)
      * Usage: createCharacterObject(characterOne, 1)
      * -------------------------
-     * This is a private member function for the Game class. This function dynamically creates a character
+     * This is a private member method for the Game class. This function dynamically creates a character
      * object based on user selection.
      */
     private void createCharacterObjects() {
         if (selectionOne == 1) {                            //Create character one dynamic character
             characterOne = new Barbarian();
         } else if (selectionOne == 2) {
-            characterOne = new Vampire;
+            characterOne = new Vampire();
         } else if (selectionOne == 3) {
-            characterOne = new BlueMen;
+            characterOne = new BlueMen();
         } else if (selectionOne == 4) {
-            characterOne = new Medusa;
+            characterOne = new Medusa();
         } else {
-            characterOne = new HarryPotter;
+            characterOne = new HarryPotter();
         }
 
         if (selectionTwo == 1) {                            //Create character two dynamic character
-            characterTwo = new Barbarian;
+            characterTwo = new Barbarian();
         } else if (selectionTwo == 2) {
-            characterTwo = new Vampire;
+            characterTwo = new Vampire();
         } else if (selectionTwo == 3) {
-            characterTwo = new BlueMen;
+            characterTwo = new BlueMen();
         } else if (selectionTwo == 4) {
             characterTwo = new Medusa;
         } else {
