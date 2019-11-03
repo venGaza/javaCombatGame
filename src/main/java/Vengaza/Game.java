@@ -45,7 +45,7 @@ public class Game implements GameInterface {
      * Method: Game::menu()
      * Usage: gameObj.menu()
      * -------------------------
-     * This is a public member function for the Game class. This function creates the menu for the class
+     * This is a public member method for the Game class. This function creates the menu for the class
      * and allows the user to play through the game or exit.
      */
     public void menu() {
@@ -101,7 +101,7 @@ public class Game implements GameInterface {
      */
     public void characterSetup() {
         characterSelection();                                        //Choose Characters
-        //createCharacterObjects();                                    //Create Character Two
+        createCharacterObjects();                                    //Create Character Two
     }
 
     /**
@@ -126,7 +126,7 @@ public class Game implements GameInterface {
     }
 
     /**
-     * Method: Game::createCharacterObject(Character*, const int&)
+     * Method: createCharacterObject(Character*, const int&)
      * Usage: createCharacterObject(characterOne, 1)
      * -------------------------
      * This is a private member method for the Game class. This function dynamically creates a character
@@ -157,8 +157,8 @@ public class Game implements GameInterface {
             characterTwo = new HarryPotter();
         }
 
-        if (characterOne.getName() == characterTwo.getName()) {               //Change characterTwo name
-            characterTwo.setName(characterOne.getName().append(" Clone"));    //if same type of character
+        if (characterOne.getName().equals(characterTwo.getName())) {               //Change characterTwo name
+            characterTwo.setName(characterOne.getName() + "Clone");    //if same type of character
         }
     }
 }

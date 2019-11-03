@@ -9,7 +9,7 @@ import java.util.Random; //Random number generator
  */
 public class HarryPotter extends Character implements HarryPotterInterface {
     private Random rand = new Random();
-    boolean hogwarts;
+    private boolean hogwarts;
 
     /**
      * Method: HarryPotter()
@@ -58,7 +58,7 @@ public class HarryPotter extends Character implements HarryPotterInterface {
         defense = die1 + die2;
 
         System.out.printf("%s defends with a dice roll of: %d %d", getName(), die1, die2);
-        System.out.printf(" for a total defense of %d!%n", defense)
+        System.out.printf(" for a total defense of %d!%n", defense);
 
         int damage = attack - defense - getArmor();
 
@@ -90,6 +90,6 @@ public class HarryPotter extends Character implements HarryPotterInterface {
      * characteristics.
      */
     public void printCharacteristic() {
-        System.out.println("Harry Potter: He is a powerful wizard who can revive himself!")
+        System.out.println("Harry Potter: He is a powerful wizard who can revive himself!");
     }
 }
