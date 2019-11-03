@@ -55,6 +55,7 @@ public class Game implements GameInterface {
             System.out.println("---------------------------------");
             System.out.println("1. Play Game");
             System.out.println("2. Exit");
+            System.out.println();
             System.out.println("Please select a number: ");
 
             int menuSelection = getInteger(1, 2);

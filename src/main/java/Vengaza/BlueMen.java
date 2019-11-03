@@ -8,7 +8,7 @@ import java.lang.Math; //Max
  * characteristics and special abilities of the BlueMen class.
  */
 public class BlueMen extends Character implements BlueMenInterface {
-    Random rand = new Random();
+    private Random rand = new Random();
     //private int defense;
     private int damage;
 
@@ -19,7 +19,7 @@ public class BlueMen extends Character implements BlueMenInterface {
      * This is the default constructor for the BlueMen class. This function sets default values for the
      * Barbarian object.
      */
-    public BlueMen() {
+    BlueMen() {
         super();
         name = "Blue Men";
         type = "Blue Men";

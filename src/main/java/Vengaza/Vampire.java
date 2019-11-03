@@ -9,7 +9,7 @@ import java.lang.Math; //Max
  * characteristics and special abilities of the Vampire class.
  */
 public class Vampire extends Character implements VampireInterface {
-    Random rand = new Random();
+    private Random rand = new Random();
 
     /**
      * Method: Vampire()
@@ -18,7 +18,7 @@ public class Vampire extends Character implements VampireInterface {
      * This is the default constructor for the Vampire class. This function sets default values for the
      * Vampire object.
      */
-    public Vampire() {
+    Vampire() {
         super();
         name = "Vampire";
         type = "Vampire";
